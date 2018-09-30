@@ -1,0 +1,116 @@
+package controller;
+//Maciej Kubiniec R00144142
+
+
+import database.ProcedureDB;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+public class ProcedureMaintenance {
+	double textToDouble = 0.0;
+	int textToInt = 0;
+	int textToIntN =0;
+    ProcedureDB procDB = new ProcedureDB();
+
+	public ProcedureMaintenance() {
+		Stage window = new Stage();
+
+		// Block events to other windows
+		window.initModality(Modality.APPLICATION_MODAL);
+		window.setTitle("Add or Remove Procedure");
+		window.setMinWidth(350);
+		window.setMinHeight(400);
+
+		Label label = new Label();
+		label.setText("PLEASE ENTER PROCEDURE DETAILS ");
+
+		// Details text fields
+		TextField textName = new TextField();
+		textName.setPromptText("Name");
+		textName.setMaxWidth(150);
+
+		TextField textDesc = new TextField();
+		textDesc.setPromptText("Description");
+		textDesc.setMaxWidth(150);
+
+		TextField textCost = new TextField();
+		textCost.setPromptText("Cost");
+		textCost.setMaxWidth(150);
+
+		VBox layout = new VBox(10);
+		layout.setAlignment(Pos.CENTER);
+		layout.setStyle("-fx-background-color: #e7d1d1;");
+
+		Button submit = new Button("Submit");
+		submit.setStyle("-fx-font-size: 10pt;");
+		submit.setTextFill(Color.GREEN);
+
+		CheckBox add = new CheckBox("Add Procedure");
+		CheckBox remove = new CheckBox("Remove Procedure");
+		add.setSelected(true);
+
+		add.selectedProperty().addListener(new ChangeListener<Boolean>() {
+			@Override
+			public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+				remove.setSelected(!newValue);
+			}
+		});
+
+		remove.selectedProperty().addListener(new ChangeListener<Boolean>() {
+			@Override
+			public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+				add.setSelected(!newValue);
+			}
+		});
+
+		// action after usage of Submit button
+		submit.setOnAction(e -> {
+
+			try {
+				// cost entry validation
+				if (textCost.getText().matches("((([0-9]){1,5})|(([0-9]){1,5}\\.[0-9]{1,2}))"))
+					textToDouble = Double.parseDouble(textCost.getText());
+
+			} catch (NumberFormatException nfe) {
+				System.out.println("error with parsing");
+			}
+
+			
+
+			if (add.isSelected()) {
+				// save to file
+				procDB.addProcedure(textToIntN,textName.getText().toString(),textDesc.getText().toString(),textToDouble);
+			}
+			if (remove.isSelected()) {
+				ProcedureDB.getInstance().deleteProcedure(textToIntN);
+			}
+			// update
+			Controller.getInstance().refresh();
+			window.close();
+
+		});
+
+		Button closeButton = new Button("Close this window");
+		closeButton.setOnAction(e -> {
+			Controller.getInstance().refresh();
+			window.close();
+		});
+		// adding text fields and buttons
+		layout.getChildren().addAll(label, textName, textDesc, textCost, add, remove, submit, closeButton);
+
+		Scene scene = new Scene(layout);
+		window.setScene(scene);
+		window.showAndWait();
+
+	}
+}
