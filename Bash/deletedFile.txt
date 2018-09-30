@@ -1,0 +1,2 @@
+Time: 2018-04-05/20:47:07: Deleted file name:  ./test2/testtext1.txt
+Time: 2018-04-05/20:47:13: Deleted file name:  ./test1/testtext3.txt

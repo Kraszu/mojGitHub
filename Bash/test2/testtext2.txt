@@ -1,0 +1,20 @@
+For each task write a short report describing your solution concept and how you arrived at it. This should be done on the top of each solution script file.
+Task 1
+Write a bash script to inform of user login activities. If a username or ID is provided to the script, it should output:
+- the real name of the user,
+- the number of times the user is logged in,
+- time and date of their last login.
+If no username is given, it should output in a tabular form:
+- all logged in users,
+- time and date of their last login.
+To test your solution, create multiple users on your system. Properly comment your code for easy understanding. [6 marks]
+Task 2
+Write a bash script to list, one at a time, all regular files larger than 2Kbyte in a target directory tree. Give the user the option to copy or delete the file, then proceed to show the next one. Write to a logfile the names of all deleted files and the deletion times. Properly comment your code for easy understanding. For testing, create a folder in your working directory with multiple files of different sizes/subfolders. Properly comment your code. [7 marks]
+Task 3
+Write a bash script with a function that accepts a file as parameter. The function should double space the lines in the file and write the output to a new file as well as to the standard output. Ensure in the body of the script that it is being called with the correct number of arguments. Also ensure that the file is readable before attempting to double space. Properly comment your code. [6 marks]
+Task 4
+Write an interactive bash script with three functions that accepts two integer parameters. The script should request a user to input two numbers. The first function should implement a multiplication. The second function should implement an addition. In the third function, when the second parameter is a multiple of 5, a multiplication operation should be executed otherwise the addition operation. The script should terminate after four interactions. Properly comment your code.
+[6 marks]
+Submission Instruction:
+Each task should be solved with a different script file. Put the solution scripts into a folder and name the folder as follows: firstname-surname. Create a Zip archive from the folder. It should have the name: firstname-surname.zip E.g., Vincent-Emeakaroha.zip. Upload this archive to Blackboard../task2.sh
+./copyStore/task2.sh

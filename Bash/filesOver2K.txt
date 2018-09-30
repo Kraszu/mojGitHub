@@ -1,0 +1,5 @@
+./test2/testtext2.txt
+./test2/testtext1.txt
+./test1/testtext3.txt
+./test1/testtext4.txt
+./task2.sh

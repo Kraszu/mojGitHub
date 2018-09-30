@@ -1,0 +1,13 @@
+
+
+
+Write a bash script with a function that accepts a file as parameter.  
+
+The function should double space the lines in the file and write the output to a new file as well as to the standard output. 
+
+Ensure in the body of the script that it is being called with the correct number of arguments. 
+
+Also ensure that the file is readable before attempting to double space. 
+
+ Properly comment your code.
+
