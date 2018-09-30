@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1525021477 source:c:\users\kraszu\documents\cit\c programming\gameproject\main.c
+	<stdio.h>
+	<stdlib.h>
+	"game.h"
+
+1525105648 c:\users\kraszu\documents\cit\c programming\gameproject\game.h
+
+1525117852 source:c:\users\kraszu\documents\cit\c programming\gameproject\game.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"game.h"
+
