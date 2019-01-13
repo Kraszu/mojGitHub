@@ -1,0 +1,293 @@
+
+/*----------CSS by Maciej Kubiniec R00144142------------*/
+h1, h2{
+	font-family: 'Noto Serif', serif;
+	color:red;
+	font-size:3em;
+}
+
+header{
+	font-size: 200%;
+	padding-top: 2em;
+}
+
+h2::first-letter{
+	background-color:red;
+	color:white;
+	border-radius: 10%;
+	padding-bottom: 0.5%;
+	padding-left:1%;
+	padding-right:1%;
+}
+
+main{   
+
+	margin-left: 25%; 
+	margin-right: 25%; 
+}
+
+/* ------------- article styling------------------------ */ 
+
+article p{
+	font-family: 'Source Serif Pro', serif;
+	text-align:justify;
+}
+
+article ol{
+	font-family: 'Source Serif Pro', serif;
+}
+
+/* ------------- Navigation bar ------------------------ */ 
+
+nav {	
+	z-index: 10000;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	background-color: white;		
+	box-shadow: 0 4px 6px -6px black; 	
+}
+
+nav ul{
+	margin: 0;
+	padding: 0.5em;
+	list-style: none;
+	text-align: center;	
+}
+
+nav li{
+	font-family: 'Rufina', serif;
+	font-size:1.2em;
+	margin: 0;
+	padding: 0;
+	display: inline-block;	
+	transition: 1s;
+	border-radius: 10%;
+	padding-left:3px;
+	padding-right:3px;	
+	margin-left:3.5%;
+	margin-right:3.5%;
+}
+
+nav li:hover{
+	background-color:pink;
+}
+
+nav li a{
+	padding: 0.5em;
+	display:block;
+	text-decoration:none;
+	color:black;
+	text-align: center;	
+}
+
+/* ------------- Social icon ------------------------ */
+
+.social { 
+	margin: 1px;
+	list-style: none; 
+	padding-left: 0px; 
+	float: right; 
+	padding-top:20px;	
+}
+
+.social li:hover{
+	opacity: 1;
+}
+	
+.social li {
+	float: right; 
+	list-style: none;
+	transition: 1s;
+	opacity: 0.3;
+}
+
+.social li a {
+	margin: 2px;
+	display: block; 
+	float: left; 	
+}
+
+/* ------------- date icon ------------------------ */
+
+.date{
+	position: relative;
+	vertical-align: middle;
+	box-sizing: border-box;
+	text-align: center;
+	display: block;
+	padding: 8px;
+	list-style: none;
+	display:index;
+	border-radius: 50%;
+	height:5em;
+	width:5em;
+	background-color: black; 
+	color:white;	
+	transform: rotate(10deg);
+}
+
+article:nth-child(odd) .date {
+	float:left;
+	margin-left: -20%;
+	color:white;
+} 
+
+article:nth-child(even) .date {
+	float:right;
+	margin-right: -20%;
+	color:white;	
+} 
+
+.date li {
+	font-family: 'Space Mono', monospace;
+}
+
+.day{
+	font-size:110%;
+	font-weight: bold;	
+}
+
+.month{
+	font-size:80%;
+	font-weight: bold;
+}
+
+.year{
+	font-size:60%;
+	font-weight: bold;
+}
+
+/* ------------- lines over and below author's name ------------------------ */
+
+article div{
+	font-family: 'Playball', cursive;
+	font-size: 1.5em;
+	margin:1px;
+	border-top:solid  black;
+	border-bottom:solid black;	 
+}
+	
+/* ------------- pictures ------------------------ */
+
+.picture,.picture img,.caption{
+	height: 85px; 
+	width: 130px;	
+	border-radius: 10%;
+	border:1px solid grey;
+	
+}
+
+article .picture{
+	position: relative;
+	overflow: hidden;
+	
+}
+
+.picture img{
+	position:absolute;	
+}
+
+article:nth-child(even) .picture{	
+	float: left;
+	margin-right:10px;	
+}
+
+article:nth-child(odd) .picture{	
+	float:right;
+	margin-left:10px;	
+}
+
+.picture:hover >.caption{		
+	visibility: visible;
+	transform: translate(0%, 0px);	
+	
+}
+
+/* ------------- caption ------------------------ */
+
+.caption{	
+	font-family: 'Source Serif Pro', serif;
+	line-height: 85px;
+	font-size:14px;
+	text-align:center;	
+	margin:0;
+	padding:0;
+	position:absolute;
+	background:red;
+	opacity:0.8;	
+	transform: translate(0px, 100%);
+	transition: all 0.5s ease-in-out;
+	
+}
+
+.caption p{
+	color:white;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
+
+/* ------------- article footer ------------------------ */
+
+article footer{
+	font-family: 'Rufina', serif;	
+	display:flex;
+	width:100%;
+	padding:2%;
+	margin:1px;	
+}
+
+span {
+	padding-right:5%;
+}
+
+.taglabel{
+	color:red;
+}
+
+/* ------------- main footer ------------------------ */
+
+.main div{
+	display:inline;
+	font-family: 'Space Mono', monospace;	
+}
+
+.main div a {
+	color:red;
+}
+
+.main div:nth-of-type(even) {	
+	color:red;
+	float:right;
+	padding-bottom:5%;
+	padding-top:5%;
+	margin:1px;
+}
+
+.main div:nth-of-type(odd){
+	color:red;
+	float:left;
+	padding-bottom:5%;
+	padding-top:5%;
+	margin:1px;
+}
+
+/* ------------- new banner ------------------------ */
+
+#banner{
+	font-family: 'Rufina', serif;
+	color: white;
+	font-size: 1.7em;
+	font-weight: bold;
+	position: absolute; 
+	top:155px; 
+	right:-100px;
+	background: red;	
+	transform: rotate(45deg);
+	padding-left:205px;
+	padding-right:226px;
+	padding-bottom:15px;
+	padding-top:15px;
+	text-align:center;	
+}
