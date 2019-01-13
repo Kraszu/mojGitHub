@@ -1,0 +1,230 @@
+/*---------------By Maciej Kubiniec SD3 R00144142----------------------*/
+
+html{
+	background:black;
+}
+body{
+	position:absolute;
+	text-align: center;
+	background:orange;
+	width: 550px;
+    height: 100%;
+	margin-left:25%; margin-right:25%;	
+}
+
+/*---------------confetti----------------------*/
+.cft{
+	
+	width: 100%;
+	height: 0%;
+	background-image : url(confetti.gif);		
+}
+/*---------------Fruit windows----------------------*/
+.all div{ 
+	width: 100px;
+	height: 100px;  
+	display:inline-block;  
+	background:white;
+	border-radius:15%;
+	background-image : url(sprite2.png); 
+	background-repeat: repeat-y;  
+	background-size: cover;
+	vertical-align: middle;   
+}
+
+#col1{
+	background-size:100px;
+	margin-bottom:10px;
+	margin-left:10px;
+	margin-top:10px;
+	padding:1px;	
+	background-position-y:0px;
+	transition: all 1s ease ;	
+}
+
+#col2{
+	background-size:100px;
+	margin:10px;
+	padding:1px;
+	background-position-y:0px;
+	transition: all 2s ease;	
+}
+
+#col3{
+	background-size:100px;
+	margin-bottom:10px;
+	margin-right:10px;
+	margin-top:10px;
+	padding:1px;
+	background-position-y:0px;
+	transition: all 3s ease;
+}
+
+
+.all{
+	background:black;
+	display:inline-block;
+	border-radius: 25px;
+	padding:1px;
+	margin:15px;
+}
+/*---------------frame----------------------*/
+.bor{
+	position: relative;
+	background:#821737;
+	display:inline-block;
+	border-radius: 25px;
+	padding:1px;
+	margin:15px;
+	top:150px;	
+}
+/*---------------machine "hand"----------------------*/
+.le{
+	position: relative;
+	top:-90px;
+	right:-469px;	
+}
+
+.midle{	
+	margin-left:12.5px;
+	border-radius: 25% 25% 0% 0%;
+	width: 10px;
+	height: 110px;
+	background:black;	
+}
+
+.top{
+	position:relative;
+	margin-left:5px;
+	top:4px;
+	margin-top:2px;
+	width: 25px;
+	height: 25px;
+	border-radius:50%;
+	background:black;	
+}
+
+.attach{	
+	width: 30px;
+	height: 30px;
+	border-radius:0% 25% 25% 0%;
+	background:grey;
+	border:solid black;
+	border-left:initial;	
+}
+/*---------------gear icon----------------------*/
+
+.gear{
+	position:absolute;
+	left:15px;
+	top:15px;
+	width:25px;
+	height:25px  
+}
+
+/*---------------color switcher----------------------*/
+.container {
+	display: block;
+	position: relative;  
+	padding-left: 5px;
+	margin-left:25px;
+	margin-bottom: 15px;  
+}
+
+.radioB{
+	position:relative;
+	top:50px;
+}
+
+/*---------------radio button elements----------------------*/
+.container input { 
+    opacity: 0;
+    cursor: pointer;  
+}
+
+
+.checkmark {	
+     position: absolute;
+	 top: 5;
+	 left: 10;
+	 height: 12px;
+	 width: 12px;
+	 background-color: white;
+	 border-radius: 50%;
+}
+
+
+.container input:checked ~ .checkmark {
+	background-color: deepskyblue;
+}
+
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+
+.container .checkmark:after {
+ 	top: 4px;
+	left: 4px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+/*--------Modal background and Content---------*/
+
+.modal {
+    display: none; 
+    position: absolute;
+    z-index: 1;   
+    padding-top:200px;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;   
+    background-color: rgba(0,0,0,0.4);   
+}
+
+
+.modal-content {
+	
+    color:white;
+    background: black;  
+    margin: auto;
+    padding: 20px;
+    border: 1px ;  
+    width: 140px; 
+    height: 200px; 
+    border: solid white;
+    border-radius:10%;
+}
+
+/*---------------- The Close Button --------------*/
+.close {
+    color: white;  
+    font-size: 21px;
+    font-weight: bold;
+    padding:1px;
+    margin:1px;
+} 
+
+.cCir{
+	margin-top:15px;
+	display:inline-block; 
+	border:solid white;
+	width:25px;
+	height:25px;
+	border-radius:50%;	
+}
+
+
+

@@ -1,0 +1,367 @@
+/*----By Maciej Kubiniec SD3 R00144142-----------------*/
+
+
+/*---------------desktop version----------------------*/
+@media only screen and (min-width : 500px){
+body{
+	background:white;
+	margin-left:5%;
+	margin-right:5%;
+	
+}
+/*---------------header and manu----------------------*/
+.naglowek{
+	display: flex;	
+	justify-content: space-between;
+}
+.header{
+	vertical-align: middle;	
+	display: flex;	
+}
+.menu{	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;	
+}
+h1, h2{
+	font-family: 'Rufina', serif;
+	font-size:3em;
+}
+
+h5{
+	font-family: 'Rufina', serif;
+	font-size:1.2em;
+	color:black;
+	margin-left:10px;
+	margin-right:10px;	
+}
+/*---------------content boxes----------------------*/
+.steps{
+	
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between; 
+	margin:1px;
+	padding:1px;
+	word-wrap: break-word;
+	
+	 
+}
+.register {
+	flex-shrink: 1;
+	height:350px;
+	width:300px;
+	border-radius: 10%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	
+}
+.login{
+	flex-shrink: 1;
+	height:350px;
+	width:300px;
+	border-radius: 10%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;	
+	margin-left:5%;
+	margin-right:5%;
+	  
+}
+.messanger {
+	flex-shrink: 1;
+	height:350px;
+	width:300px;
+	border-radius: 10%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	
+
+}
+.bac1{
+	
+	height:100%;
+	background-image : url(cit2.jpg);
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat
+}
+.bac2{
+	
+	height:100%;
+	background-image : url(cit1.jpg);
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat
+}
+.bac3{
+	
+	height:100%;
+	background-image : url(cit4.jpg);
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat
+}
+	
+	
+
+.sc{
+	font-family: 'Noto Serif', serif;
+	background:pink;
+	color:darkred;
+		
+}
+.sc p{
+	margin-left:15px;
+	font-size:2em;
+	font-weight:bold;
+}
+.hc{
+	color:white;
+	background:darkred;
+}
+.hc p{
+	margin-left:15px;
+	font-size:1.5em;
+	font-weight:bold;
+}
+/*---------------mebers pictures animation----------------------*/
+.picCont{
+	margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.profPic{
+	
+	position:relative;
+	height:100px;
+	width:800px;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	border-top:solid black;
+	border-bottom:solid black;
+	
+	
+	bottom:45px;
+	margin:2%;
+	
+}
+
+.profPic img{
+	display:inline-block;
+	height:75px;
+	width:75px;
+	border-radius:50%;
+	margin:2%;
+	padding:0.1px;
+	position: relative;
+	animation: mymove  20s linear infinite;
+	
+}
+h2{
+	text-align:center;
+}
+
+@keyframes mymove {
+	
+	from {left: 700px;}
+	to {left: -650px;}
+	0%  {opacity: 0.1;}
+	5%  {opacity: 0.5;}
+	10%  {opacity: 0.9;}
+	15%  {opacity: 1;}
+	90% { opacity: 0.9; }
+	95% { opacity: 0.5; }
+	100% { opacity: 0; }
+    
+}
+
+.copyright{
+	
+	color:dimgray;
+	left:45%;
+	bottom:1px;
+	
+}
+}
+/*---------------mobile view----------------------*/
+
+
+@media only screen and (max-width : 500px){
+body{
+	background:white;
+	
+	
+}
+/*---------------header and menu----------------------*/
+.naglowek{
+	display: flex;
+	flex-direction: column-reverse;
+	
+	
+}
+.header{
+		
+	display: flex;
+	
+}
+.menu{	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;	
+	background:	darkred;
+	
+	
+}
+h1{
+	margin-left:5%;
+}
+h1, h2{
+	font-family: 'Rufina', serif;
+	font-size:3em;
+	
+}
+
+h5{
+	font-family: 'Rufina', serif;
+	font-size:1.2em;
+	color:white;
+	margin-left:8%;
+	margin-right:5%;	
+}
+/*---------------content boxes----------------------*/
+.steps{
+	align-items: center;
+	display: flex;
+	flex-direction:column;	 
+	margin:1px;
+	padding:1px;
+	word-wrap: break-word;
+	text-align: center;
+	
+	 
+}
+.register {
+	flex-shrink: 1;	
+	display: flex;
+	flex-direction:column-reverse;
+	overflow: hidden;
+	box-shadow: 0 4px 6px -6px black; 
+	margin-top:1px;
+	margin-bottom:1px;	
+	
+}
+.login{
+	flex-shrink: 1;	
+	display: flex;
+	flex-direction:column-reverse;
+	overflow: hidden;	
+	box-shadow: 0 4px 6px -6px black;
+	margin-top:1px;
+	margin-bottom:1px;	
+	
+	
+}
+.messanger {
+	flex-shrink: 1;
+	display: flex;
+	flex-direction:column-reverse;
+	overflow: hidden;
+	box-shadow: 0 4px 6px -6px black; 
+	
+
+}
+
+	
+	
+
+.sc{
+	font-family: 'Noto Serif', serif;
+	background:white;
+	color:black;
+	justify-content: flex-end;
+	height:75px;
+	width:250px;
+	 
+}
+.sc p{
+	margin-left:15px;
+	font-size:1.5em;
+	font-weight:bold;
+}
+.hc{
+	height:75px;
+	width:250px;
+	color:black;
+	background:white;
+	justify-content: flex-start;
+	
+	
+}
+.hc p{
+	justify-content: flex-start;
+	margin-left:15px;
+	font-size:1em;
+	font-weight:bold;
+}
+/*---------------mebers pictures animation----------------------*/
+.picCont{
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+.profPic{
+	
+	position:relative;
+	height:100px;	
+	display: flex;
+	flex-wrap: nowrap;	
+	bottom:35px;
+	margin:2%;
+	
+}
+
+.profPic img{
+	display:inline-block;
+	height:75px;
+	width:75px;
+	border-radius:15%;
+	margin:0.5%;
+	padding:0.1px;
+	position: relative;
+	animation: mymove  20s linear infinite;
+	
+}
+h2{
+	text-align:center;
+}
+
+@keyframes mymove {
+	
+	from {left: 400px;}
+	to {left: -670px;}
+	0%  {opacity: 0.1;}
+	5%  {opacity: 0.5;}
+	10%  {opacity: 0.9;}
+	15%  {opacity: 1;}
+	90% { opacity: 0.9; }
+	95% { opacity: 0.5; }
+	100% { opacity: 0; }
+    
+}
+
+.copyright{
+	position: absolute;
+	color:dimgray;
+	left:45%;
+	
+}
+}
+

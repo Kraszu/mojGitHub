@@ -1,0 +1,65 @@
+
+<!---------------By Maciej Kubiniec SD3 R00144142---------------------->
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="FruitMachine.css">
+ <script src="FruitMachine.js"> </script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fruit Machine</title>
+
+
+</head>
+
+
+
+<body id ="body">
+<div class = "cft" id= "ole">
+<img onclick = "modalStart()" src="gear.png" alt= "gear" class="gear"/>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+		
+		<div id= "radio" class="radioB">
+			<label class="container">Orange
+				  <input type="radio" checked="checked" name="radio">
+				  <span class="checkmark"  onclick = "orange()"></span>
+			</label>
+			<label class="container">White
+				  <input type="radio" name="radio">
+				  <span class="checkmark"  onclick = "white()"></span>
+			</label>
+			<span class="close" onclick = "modalClose()">
+			<div class= "cCir">&times;</div></span>
+		</div>
+	  </div>
+
+	</div>
+
+	<div class="bor" id="rama">
+		<div class="all">
+			<div id="col1"></div>
+			<div id="col2"></div>
+			<div id="col3"></div>
+		</div>
+	</div>
+
+	<div class= "le">
+		<div class = "top"  id = "test" onclick="pull(),animation()"></div>
+		<div class = "midle" id = "test1"></div>
+		<div class = "attach" id = "test3"></div>
+	</div>
+
+		<!-- Trigger/Open The Modal   -->
+
+	
+	
+</div>
+
+
+
+
+</body>
+</html>
